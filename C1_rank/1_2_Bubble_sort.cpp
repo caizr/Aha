@@ -38,5 +38,4 @@ int swap(int *,int *);
      *a=*b;
      *b=temp;
      return 1;
-
  }

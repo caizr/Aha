@@ -1,6 +1,8 @@
 //冒泡排序
  #include<iostream>
-
+//声明
+int BubbleSort(int *,int);
+int swap(int *,int *);
  using namespace std;
 
  int main(){
@@ -12,15 +14,29 @@
      for (int i=0;i<num;++i){
          cin>>data[i];
      }
+     BubbleSort(data,num);
+     for (int i=0;i<num;++i){
+         cout<<data[i]<<endl;
+     }
 
      return 0;
  }
 
- int BubbleSort(int* array){
-     for(int i=0;i<10-1;++i){
-         for (int j=0;j<10-1;++j){
-             if ( a[j] <a[j+1])
-                swap( a+j, a+j+1 );
+ int BubbleSort(int* array,int num){
+     for(int i=0;i<num-1;++i){
+         //这里j的条件搞错过
+         for (int j=0;j<num-1-i;++j){
+             if ( array[j] <array[j+1])
+                swap( array+j, array+j+1 );
          }
      }
+     return 1;
+ }
+
+  int swap(int* a,int* b){
+     int temp = *a;
+     *a=*b;
+     *b=temp;
+     return 1;
+
  }

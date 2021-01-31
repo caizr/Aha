@@ -1,8 +1,10 @@
 #include<iostream>
+// 冒泡排序
 // decleration
 int swap(int*,int*);
 using namespace std;
  int main(){
+     
      int a[10]={1,2,4,5,6,7,8,9,11,12};
 
      for(int i=0;i<10-1;++i){
